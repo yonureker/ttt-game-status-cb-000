@@ -25,17 +25,25 @@ def won?(board)
     position_2 = board[win_index_2] # load the value of the board at win_index_2
     position_3 = board[win_index_3] # load the value of the board at win_index_3
 
-    position_check = (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
+    if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 =="O" && position_2 == "O" && position_3 == "O"
+      return win_combination
+    end
 
-  if empty?(board)
-    return false
-  elsif full?(board) && (!position_check == true)
-    return false
-  elsif !empty?(board) && (!position_check == false)
-    return win_combination
   end
+else
+  false
 end
-end
+#     position_check = (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
+# 
+#   if empty?(board)
+#     return false
+#   elsif full?(board) && (!position_check == true)
+#     return false
+#   elsif !empty?(board) && (!position_check == false)
+#     return win_combination
+#   end
+# end
+# end
 
 def full?(board)
   board.all? do |i|
