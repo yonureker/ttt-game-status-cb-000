@@ -51,13 +51,6 @@ def full?(board)
   end
 end
 
-def empty?(board)
-  board.all? do |i|
-    i == " "
-  end
-end
-
-
 def draw?(board)
   if full?(board) && won?(board) == false
     return true
