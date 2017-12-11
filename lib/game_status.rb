@@ -29,9 +29,9 @@ def won?(board)
 
   if empty?(board)
     return false
-  elsif full?(board)
+  elsif full?(board) && (!position_check == false)
     return false
-  elsif !empty?(board)
+  elsif !empty?(board) && (!position_check == false)
     return win_combination
   end
 end
