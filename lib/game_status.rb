@@ -27,14 +27,14 @@ def won?(board)
 
     position_check = (position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O")
 
-    if empty?(board)
-      return false
-    elsif full?(board) && (!position_check == false)
-      return false
-    elsif !empty?(board) && (!position_check == false)
-      return win_combination
-    end
+  if empty?(board)
+    return false
+  elsif full?(board) && (!position_check == false)
+    return false
+  elsif !empty?(board) && (!position_check == false)
+    return win_combination
   end
+end
 end
 
 def full?(board)
