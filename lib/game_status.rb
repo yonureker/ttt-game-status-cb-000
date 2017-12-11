@@ -29,7 +29,7 @@ def won?(board)
 
   if empty?(board)
     return false
-  elsif full?(board) && (!position_check == false)
+  elsif full?(board) && (!position_check == true)
     return false
   elsif !empty?(board) && (!position_check == false)
     return win_combination
